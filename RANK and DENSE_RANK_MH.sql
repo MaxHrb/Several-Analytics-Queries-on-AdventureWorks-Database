@@ -1,6 +1,6 @@
 /**
 
-RANK and DENSE_RANK - Exercises
+RANK and DENSE_RANK
 
 **/
 
