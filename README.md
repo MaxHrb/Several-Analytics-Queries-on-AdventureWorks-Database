@@ -20,3 +20,7 @@ This SQL script demonstrates the use of correlated subqueries to extract additio
 In the first example, the query retrieves sales order information from the SalesOrderHeader table, and also counts the number of orders that have more than one item in the SalesOrderDetail table using a correlated subquery. The same approach is taken in the second example, where purchase order information is retrieved from the PurchaseOrderHeader table, and the number of non-rejected items is counted using a correlated subquery.
 
 In the third example, additional data is extracted from the PurchaseOrderDetail table, by finding the maximum unit price for each purchase order using another correlated subquery. Overall, the script demonstrates the flexibility and power of correlated subqueries in SQL.
+
+
+### TempTables
+The script uses temporary tables and correlated subqueries to calculate sales and purchases by month minus the top 10 orders. The output is presented by joining the two tables on the month column.
