@@ -1,3 +1,12 @@
+/**First, #Sales is created with four columns: OrderDate, OrderMonth, TotalDue, and OrderRank. OrderDate and TotalDue columns are populated with data from the SalesOrderHeader table in the AdventureWorks2019 database. The OrderMonth column is calculated from the OrderDate column using the DATEFROMPARTS function to extract the year and month and create a new date with the first day of that month. The OrderRank column is assigned a ranking value based on the TotalDue column for each month, using the ROW_NUMBER() function and partitioning by the OrderMonth column.
+
+Next, #Top10Sales is created with two columns: OrderMonth and Top10Total. The Top10Total column is calculated as the sum of TotalDue from #Sales table, but only for the top 10 rows in each month based on the OrderRank column.
+
+Finally, a SELECT statement is executed to retrieve data from #Top10Sales, joining it with itself to retrieve the Top10Total value for the previous month using the DATEADD function. The results are ordered by OrderMonth. Another SELECT statement is executed to retrieve data from #Sales table where OrderRank is less than or equal to 10. At the end of the script, both temporary tables are dropped using the DROP TABLE command.**/
+
+
+
+
 /**  CTEs **/
 
 
